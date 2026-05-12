@@ -373,25 +373,25 @@ python ui/demo_ecg_monitor.py \
 
 ### Pipeline Overview
 
-![Pipeline](paper/figures/system_overview.png)
+![Pipeline](docs/figures/system_overview.png)
 
 *The full offline-to-on-device pipeline. A 1-D CNN backbone is trained on DS1 and exported as native-C arrays. On the PSoC 6 CM4, the frozen backbone maps each support beat to a 32-D embedding; per-class prototypes are the closed-form means. Query beats are classified by nearest-prototype Euclidean distance.*
 
 ### ECG Beat Examples
 
-![ECG Examples](paper/figures/ecg_examples.png)
+![ECG Examples](docs/figures/ecg_examples.png)
 
 *Representative beat windows from the processed MIT-BIH dataset. All beats are centred at the annotated R-peak and normalised by per-beat z-score. The abnormal class aggregates structurally distinct waveform types (LBBB, RBBB, PVC, APB).*
 
 ### Prototype Adaptation Geometry
 
-![Prototype Adaptation](paper/figures/prototype_adaptation.png)
+![Prototype Adaptation](docs/figures/prototype_adaptation.png)
 
 *Support beats from each class cluster around their respective centroid in the frozen embedding space. Per-class prototypes define patient-specific decision boundaries without any gradient step.*
 
 ### Offline Results (DS2 aggregate)
 
-![Offline Results](paper/figures/offline_results.png)
+![Offline Results](docs/figures/offline_results.png)
 
 **Table 1 — DS2 aggregate macro-F1 and host-side adaptation time.**
 Adaptation times are Python/PyTorch host-side reference measurements.
@@ -407,7 +407,7 @@ MCU-measured times appear in Table 3.
 
 ### Restricted-Prototype Ablation
 
-![Restricted Ablation](paper/figures/restricted_ablation.png)
+![Restricted Ablation](docs/figures/restricted_ablation.png)
 
 **Table 2 — Restricted-prototype ablation.**
 Only normal-beat support from the target patient is used; the arrhythmia prototype is inherited from DS1 training. Evaluated on the common eligible DS2 subset.
@@ -508,7 +508,7 @@ The firmware replays 18 DS2 1-shot episodes (576 query beats total) and reports 
 
 ### Compute Cost Figure
 
-![Compute Cost](paper/figures/compute_cost.png)
+![Compute Cost](docs/figures/compute_cost.png)
 
 *Adaptation time vs. shot count for both methods, measured on-device (CM4 @ 100 MHz). Prototype cost scales linearly with K (one backbone forward pass per support beat); SGD cost also scales with K through its iterative gradient updates.*
 
