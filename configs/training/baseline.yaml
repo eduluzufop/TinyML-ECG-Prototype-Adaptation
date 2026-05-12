@@ -1,0 +1,13 @@
+seed: 42
+dataset_path: data/processed/mitbih_binary.npz
+metadata_path: data/metadata/mitbih_binary_metadata.json
+model_config: configs/model/cnn1d_tiny.yaml
+output_dir: artifacts/checkpoints
+results_path: results/offline/train_metrics.json
+embedding_dim: 32
+val_fraction: 0.1
+training:
+  batch_size: 64
+  epochs: 5
+  lr: 0.001
+  weight_decay: 0.0

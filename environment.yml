@@ -1,0 +1,9 @@
+name: psoc6-ecg-personalization
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

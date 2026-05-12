@@ -1,0 +1,6 @@
+model:
+  name: mlp_tiny
+  input_dim: 200
+  hidden_dim: 64
+  embedding_dim: 32
+  num_classes: 2

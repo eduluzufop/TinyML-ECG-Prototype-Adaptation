@@ -1,0 +1,10 @@
+dataset_name: mitbih
+raw_dir: data/raw/mitbih
+processed_path: data/processed/mitbih_three_class.npz
+metadata_dir: data/metadata
+window:
+  pre_samples: 90
+  post_samples: 110
+normalization: zscore_per_beat
+task: three_class
+seed: 42

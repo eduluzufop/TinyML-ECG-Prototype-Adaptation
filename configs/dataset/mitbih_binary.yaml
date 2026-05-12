@@ -1,0 +1,18 @@
+dataset_name: mitbih
+raw_dir: data/raw/mitbih
+processed_path: data/processed/mitbih_binary.npz
+metadata_dir: data/metadata
+metadata_path: data/metadata/mitbih_binary_metadata.json
+split_scheme: de_chazal_interpatient_ds1_ds2
+window:
+  pre_samples: 90
+  post_samples: 110
+normalization: zscore_per_beat
+preferred_leads:
+  - MLII
+  - ML2
+  - V5
+  - II
+task: binary
+seed: 42
+val_fraction: 0.1

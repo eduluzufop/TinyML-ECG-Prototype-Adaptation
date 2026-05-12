@@ -1,0 +1,4 @@
+method: linear
+steps: 50
+lr: 0.05
+weight_decay: 0.0

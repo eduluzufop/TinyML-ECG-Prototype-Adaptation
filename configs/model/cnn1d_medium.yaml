@@ -1,0 +1,6 @@
+model:
+  name: cnn1d_medium
+  in_channels: 1
+  conv_channels: [12, 24]
+  embedding_dim: 40
+  num_classes: 2

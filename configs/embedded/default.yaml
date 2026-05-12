@@ -1,0 +1,5 @@
+target: psoc6_cy8cproto_063_ble
+board_id: APP_CY8CPROTO-063-BLE
+embedding_dim: 32
+num_classes: 2
+uart_baudrate: 115200

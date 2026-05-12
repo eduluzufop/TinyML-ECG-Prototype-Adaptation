@@ -1,0 +1,7 @@
+dataset_path: data/processed/mitbih_binary.npz
+metadata_path: data/metadata/mitbih_binary_metadata.json
+checkpoint: artifacts/checkpoints/baseline.pt
+shots: 5
+seed: 42
+subject_split: de_chazal_ds2_records
+output_path: results/offline/protocol_5shot.json
